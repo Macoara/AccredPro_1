@@ -464,11 +464,13 @@ h4 {
 
 @media screen and (max-width: 768px) {
     .btn {
-        display: none;
+        display: none !important;
     }
+    /*Mostrar el botón de "Menú"*/
     .menu {
-        display: block;
+        display: block !important;
     }
+    /*Asegurar que el menú de navegación esté oculto inicialmente*/
     .nav-links {
         display: none;
         flex-direction: column;
@@ -479,8 +481,9 @@ h4 {
         width: 100%;
         background: white;
         padding: 10px 0;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease-in-out;
     }
+    /*Mostrar el Menú cuando se active*/
     .nav-links.active {
         display: flex;
     }

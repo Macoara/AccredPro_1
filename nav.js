@@ -11,4 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
     menuButton.addEventListener("click", function() {
         navLinks.classList.toggle("active");
     });
+    //Cerrar el menú si se hace click fuera de él
+document.addEventListener("click", function(event) {
+    if (event.target.closest(".menu") === null) {
+        navLinks.classList.remove("active");
+        }
+    });
 });
